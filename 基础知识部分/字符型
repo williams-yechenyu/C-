@@ -1,0 +1,16 @@
+//
+// Created by Williams on 2022/7/2.
+//
+#include<iostream>
+using namespace std;
+int main()
+{
+    //1、字符型变量创建方式
+    char ch='a';
+    cout<<ch<<endl;
+    //2、字符型变量所占内存大小
+    cout<<"char字符型变量所占内存"<<sizeof(char)<<endl;
+    //字符型变量对应ASCII码表
+    cout<<(int)ch<<endl;
+    return 0;
+}
