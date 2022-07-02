@@ -1,0 +1,16 @@
+//
+// Created by Williams on 2022/7/1.
+//
+#include<iostream>
+using namespace std;
+int main()
+{
+    cout<<"short占用的内存空间为："<<sizeof(short)<<endl;
+    cout<<"int占用的内存空间为："<<sizeof(int)<<endl;
+    cout<<"long占用的内存空间为："<<sizeof(long)<<endl;
+    cout<<"long long占用的内存空间为："<<sizeof(long long)<<endl;
+    system("pause");
+    return 0;
+    //整型大小比较
+    //short<int<=long<=long long
+}
