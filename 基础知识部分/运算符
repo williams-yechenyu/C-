@@ -1,0 +1,103 @@
+//
+// Created by Williams on 2022/7/2.
+//
+#include<iostream>
+using namespace std;
+int main()
+{
+    //加减乘除
+    int a1=10;
+    int b1=3;
+    cout<<a1+b1<<endl;
+    cout<<a1-b1<<endl;
+    cout<<a1*b1<<endl;
+    cout<<a1/b1<<endl;//两个整数相除，结果依然是整数，将小数部分去除
+
+    int a2=10;
+    int b2=20;
+    cout<<a2/b2<<endl;
+    //两个小数相除
+    double d1=0.5;
+    double d2=0.25;
+    cout<<d1/d2<<endl;
+
+    //取模运算
+    int a3=10;
+    int b3=3;
+    cout<<a3%b3<<endl;
+
+    int a4=10;
+    int b4=20;
+    cout<<a4%b4<<endl;
+
+    //两个小数不可以做取模运算
+    double d3=3.14;
+    double d4=1.2;
+//    cout<<d1&d2<<endl;
+
+    //前置递增
+    int a=10;
+    ++a;
+    cout<<"a="<<a<<endl;
+
+    //后置递增
+    int b=10;
+    b++;
+    cout<<"b="<<b<<endl;
+
+    //前置和后置的区别
+    //前置递增 先让变量+1 然后进行表达式的运算
+    int a5=10;
+    int b5=++a5*10;
+    cout<<"a5="<<a5<<endl;
+    cout<<"b5="<<b5<<endl;
+    //后置递增 先进行表达式的运算 再+1
+    int a6=10;
+    int b6=a6++*10;
+    cout<<"a6="<<a3<<endl;
+    cout<<"b6="<<b6<<endl;
+
+    //赋值运算符
+    //=
+    int a7=10;
+    a7=100;
+    cout<<"a7="<<a7<<endl;
+    //+=
+    a7=10;
+    a7+=2;//a7=a7+2;
+    cout<<"a7="<<a7<<endl;
+    //-=
+    a7=10;
+    a7-=2;//a7=a7-2;
+    cout<<"a7="<<a7<<endl;
+    //*=
+    a7=10;
+    a7*=2;//a7=a7*2;
+    cout<<"a7="<<a7<<endl;
+    //=
+    a7=10;
+    a7/=2;//a7=a7/2;
+    cout<<"a7="<<a7<<endl;
+    //%=
+    a7=10;
+    a7%=2;//a7=a7%2;
+    cout<<"a7="<<a7<<endl;
+
+    //比较运算符
+    //==
+    int a8=10;
+    int b8=20;
+    cout<<(a8==b8)<<endl;
+    //！=
+    cout<<(a8!=b8)<<endl;
+    //>
+    cout<<(a8>b8)<<endl;
+    //<
+    cout<<(a8<b8)<<endl;
+    //>=
+    cout<<(a8>=b8)<<endl;
+    //<=
+    cout<<(a8<=b8)<<endl;
+    
+    return 0;
+}
