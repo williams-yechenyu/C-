@@ -1,0 +1,19 @@
+//
+// Created by Williams on 2022/7/2.
+//
+#include<iostream>
+using namespace std;
+#include<string>
+int main()
+{
+    //C语言风格的字符串
+    //char字符串名[]
+    //等号后面要用双引号包含起来字符串
+    char str[]="hello world";
+    cout<<str<<endl;
+
+    //C++语言风格的字符串
+    //包含一个头文件#include<string>
+    string str2="hello world";
+    cout<<str2<<endl;
+}
