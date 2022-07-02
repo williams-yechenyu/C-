@@ -1,0 +1,17 @@
+//
+// Created by Williams on 2022/7/2.
+//
+#include<iostream>
+using namespace std;
+int main()
+{
+    //创建bool数据类型
+    bool flag = true;//true代表真
+    cout<<flag<<endl;
+    flag = false;//false代表假
+    cout<<flag<<endl;
+    //本质上 1为真 0为假
+
+    //查看bool类型所占内存空间
+    cout<<"Bool类型所占内存空间大小为："<< sizeof(bool)<<endl;
+}
