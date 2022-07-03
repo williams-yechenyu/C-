@@ -98,6 +98,39 @@ int main()
     cout<<(a8>=b8)<<endl;
     //<=
     cout<<(a8<=b8)<<endl;
-    
+
+    //逻辑运算符  非
+    int a9=10;
+    //在C++中除了0都是真
+    cout<<!a9<<endl;//  0
+    cout<<!!a9<<endl;//  1
+
+    //逻辑运算符  与&&
+    int a10=10;
+    int b10=10;
+    cout<<(a10&&b10)<<endl;
+
+    a10=0;
+    b10=10;
+    cout<<(a10&&b10)<<endl;
+
+    a10=0;
+    b10=0;
+    cout<<(a10&&b10)<<endl;   //同真为真，其余为假
+
+    //逻辑运算符  ||
+    int a11=10;
+    int b11=10;
+    cout<<(a11||b11)<<endl;
+
+    a11=0;
+    b11=10;
+    cout<<(a11||b11)<<endl;
+
+    a11=0;
+    b11=0;
+    cout<<(a11||b11)<<endl;   //同假为假，其余为真
+
+    system("pause");
     return 0;
 }
