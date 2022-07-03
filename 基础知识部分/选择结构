@@ -1,0 +1,210 @@
+//
+// Created by Williams on 2022/7/3.
+//
+#include<iostream>
+using namespace std;
+int main()
+{
+    /*
+    //选择结构  单行if语句
+    //用户输入分数，分数大于600，视为考上一本大学，在屏幕输出
+
+    //1、用户输入分数
+    int score=0;
+    cout<<"请输入一个分数："<<endl;
+    cin>>score;
+
+    //2、打印用户输入的分数
+    cout<<"您输入的分数是："<<score<<endl;
+
+    //3、判断分数是否大于600，如果大于，那么输出
+    if(score>600)
+    {
+        cout<<"恭喜您考上了一本大学"<<endl;
+    }
+     */
+
+    /*
+    //选择结构  多行if语句
+    //输入考试分数，如果分数大于600，视为考上一本大学，在屏幕输出
+    //如果没考上一本大学，打印未考上一本大学
+
+    //1、输入考试分数
+    int score=0;
+    cout<<"请输入您的考试分数："<<endl;
+    cin>>score;
+
+    //2、提示用户输入的分数
+    cout<<"您输入的分数是："<<score<<endl;
+    //3、判断，如果大于600，打印考上一本，否则打印未考上一本
+    if(score>600)
+    {
+        cout<<"恭喜您考上了一本大学"<<endl;
+    }
+    else
+        (
+                cout<<"未考上一本大学"<<endl
+                );
+    */
+
+    /*
+    //选择结构中的多条件if语句
+    //输入一个考试分数，如果大于600分，视为考上一本大学；大于500分，视为考上二本大学；大于400分，视为考上三本大学；小于等于400分，未考上本科
+
+    //1、用户输入分数
+    int score=0;
+    cout<<"请输入考试分数："<<endl;
+    cin>>score;
+    //2、提示用户输入的分数
+    cout<<"您输入的分数是："<<score<<endl;
+    //3、判断
+    //如果大于600，考上一本
+    //如果大于500，考上二本
+    //如果大于400，考上三本
+    if(score>600)
+    {
+        cout<<"恭喜您考上了一本大学"<<endl;
+    }
+    else if(score>500)
+    {
+        cout<<"恭喜您考上了二本大学"<<endl;
+    }
+    else if(score>400)
+    {
+        cout<<"恭喜您考上了三本大学"<<endl;
+    }else
+    {
+        cout<<"未考上"<<endl;
+    }
+     */
+
+
+    /*
+     提示用户输入一个高考考试分数，根据分数做出如下判断
+     如果大于600分，视为考上一本大学；大于500分，视为考上二本大学；大于400分，视为考上三本大学；小于等于400分，未考上本科
+     在一本分数中，如果大于700分，考入北京大学；大于650分，考入清华大学；大于600分，考入中国人民大学
+     */
+    /*
+    //1、提示输入高考分数
+    int score=0;
+    cout<<"请输入考试分数："<<endl;
+    cin>>score;
+    //2、显示高考分数
+    cout<<"您的高考分数是："<<score<<endl;
+    //3、判断
+    if(score>600)
+    {
+        cout<<"恭喜您考上了一本大学"<<endl;
+        if(score>700)
+        {
+            cout<<"您能考入北京大学"<<endl;
+        }
+        else if(score>650)
+        {
+            cout<<"您能考入清华大学"<<endl;
+        }else
+        {
+            cout<<"您能考入中国人民大学"<<endl;
+        }
+    }
+    else if(score>500)
+    {
+        cout<<"恭喜您考上了二本大学"<<endl;
+    }
+    else if(score>400)
+    {
+        cout<<"恭喜您考上了三本大学"<<endl;
+    }else
+    {
+        cout<<"未考上"<<endl;
+    }
+    */
+
+    /*
+    //选择结构案例----三只小猪称体重
+    int Pig1=0,Pig2=0,Pig3=0;
+    cout<<"请输入小猪A的体重："<<endl;
+    cin>>Pig1;
+    cout<<"请输入小猪B的体重："<<endl;
+    cin>>Pig2;
+    cout<<"请输入小猪C的体重："<<endl;
+    cin>>Pig3;
+    cout<<"小猪A的体重："<<Pig1<<endl;
+    cout<<"小猪B的体重："<<Pig2<<endl;
+    cout<<"小猪C的体重："<<Pig3<<endl;
+    if(Pig1>Pig2)
+    {
+        if(Pig1>Pig3)
+        {
+            cout<<"小猪A最重"<<endl;
+        }
+        else
+        {
+            cout<<"小猪C最重"<<endl;
+        }
+    }
+    else
+    {
+        if(Pig2>Pig3)
+        {
+            cout<<"小猪B最重"<<endl;
+        }
+        else
+        {
+            cout<<"小猪C最重"<<endl;
+        }
+    }
+     */
+
+    /*
+    //三目运算符
+    //创建三个变量a,b,c
+    //将a和b作比较，将变量大的值赋给c
+    int a=10;
+    int b=20;
+    int c=0;
+    c=(a>b?a:b);
+    cout<<"变量c为："<<c<<endl;
+    //在C++中三目运算符返回的是变量可以继续赋值
+    (a>b?a:b)=100;
+    cout<<"a="<<a<<endl;
+    cout<<"b="<<b<<endl;
+    */
+
+    //switch语句
+    //给电影打分
+    //10~9  经典
+    //8~7   非常好
+    //6~5   一般
+    //5以下  烂片
+    //1、提示用户给电影打分
+    cout<<"请给电影进行打分："<<endl;
+    //2、用户开始进行打分
+    int score=0;
+    cin>>score;
+    cout<<"您打的分数是："<<score<<endl;
+    //3、根据用户输入的分数来提示用户最后的结果
+    switch(score)
+    {
+        case 10:
+            cout<<"您认为是经典电影"<<endl;break;
+        case 9:
+            cout<<"您认为是经典电影"<<endl;break;
+        case 8:
+            cout<<"您认为电影非常好"<<endl;break;
+        case 7:
+            cout<<"您认为电影非常好"<<endl;break;
+        case 6:
+            cout<<"您认为电影一般"<<endl;break;
+        case 5:
+            cout<<"您认为电影一般"<<endl;break;
+        default:
+            cout<<"您认为电影是烂片"<<endl;break;
+    }
+
+    //if 和 switch区别
+    //switch缺点，判断时候只能是整型或者字符型，不可以是区间
+    //switch优点，结构清晰，执行效率高
+
+    return 0;
+}
