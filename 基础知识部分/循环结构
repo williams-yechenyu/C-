@@ -1,0 +1,132 @@
+//
+// Created by Williams on 2022/7/4.
+//
+#include<iostream>
+using namespace std;
+//time系统时间头文件包含
+#include<ctime>
+int main()
+{
+    /*
+    //while循环
+    //在屏幕中打印 0~9 这10个数字
+    int num=0;
+    while(num<10)
+    {
+        cout<<num<<endl;
+        num++;
+    }
+     */
+
+    /*
+    //猜数字
+    //添加随机数种子，作用利用当前系统时间生成随机数，防止每次随机数都一样
+    srand((unsigned int)time(NULL));
+    //1、系统生成随机数
+    int num=rand()%100+1;  //rand()%100生成0~99的随机数
+    //2、玩家进行猜测
+    int val=0;  //玩家输入的数据
+    while(1) {
+        cout << "请输入猜测数：" << endl;
+        cin >> val;
+        //3、判断玩家的猜测
+        if(val>num)//猜错，提示猜的结果，过大或者过小，重新返回第二步
+        {
+            cout<<"猜测过大"<<endl;
+        }
+        else if(val<num)
+        {
+            cout<<"猜测过小"<<endl;
+        }
+        else
+        {
+            cout<<"恭喜您猜对了"<<endl;
+            break;//猜对，退出游戏
+        }
+    }
+    */
+
+    /*
+    //do-while语句
+    //在屏幕中输出0~9这10个数字
+    int num=0;
+    do {
+        cout<<num<<endl;
+        num++;
+    }while(num<10);
+    //do-while和while循环区别在于do-while会先执行一次循环语句
+     */
+
+    /*
+    //水仙花数  获取个位 十位 百位 判断 个位^3+十位^3+百位^3=本身
+    int num=100;
+    do {
+        //2、在所有三位数中找到水仙花数
+        int a=0;//个位
+        a=num%10;
+        int b=0;//十位
+        b=num/10%10;
+        int c=0;//百位
+        c=num/100;
+        if(a*a*a+b*b*b+c*c*c==num)
+        {
+            cout<<num<<endl;
+        }
+        num++;
+    }while(num<1000);//1、将所有的三位数进行输出（100~999）
+     */
+
+    /*
+    //for循环
+    //从数字0打印到数字9
+    for(int i=0;i<10;i++)
+    {
+        cout<<i<<endl;
+    }
+     */
+
+    /*
+    //敲桌子案例
+    //1、先输出1~100这些数字
+    for(int i=1;i<=100;i++)
+    {
+        //2、从这100个数字中找到特殊数字，改为“敲桌子”
+        //特殊数字  7的倍数（%7=0）  个位有7（%10=7）  十位有7（/10=7）
+        if(i%7==0||i%10==7||i/10==7)
+        {
+            cout<<"敲桌子"<<endl;
+        }
+        else
+        {
+            cout << i << endl;
+        }
+    }
+     */
+
+    /*
+    //嵌套循环实现星图
+    //打印一行星图
+    //外层执行一次，内层执行一周
+    for(int i=0;i<10;i++)//外层循环
+    {
+        for(int j=0;j<10;j++)//内层循环
+        {
+            cout<<"* ";
+        }cout<<endl;
+    }
+    */
+
+    //嵌套循环案例--乘法口诀表
+    //列数*行数=计算结果
+    //列数<=行数
+    for(int i=1;i<=9;i++)
+    {
+//        cout<<i<<endl;//打印行数
+        for(int j=1;j<=i;j++)
+        {
+            cout<<j<<"*"<<i<<"="<<j*i<<"  ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
