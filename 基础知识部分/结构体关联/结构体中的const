@@ -1,0 +1,21 @@
+//
+// Created by Williams on 2022/7/6.
+//
+#include<iostream>
+using namespace std;
+struct student
+{
+    string name;
+    int age;
+    int score;
+};
+void printstudent(const student s)//可以将函数中的形参改为指针，可以减少内存空间，而且不会复制新的副本出来
+{
+    //s->age=100;//加入const之后，一旦有修改的操作就会报错，可以防止我们误操作
+    cout<<"子函数中 姓名："<<s.name<<" 年龄："<<s.age<<" 分数："<<s.score<<endl;
+}
+int main()
+{
+    struct student s={"张三",20,80};
+    printstudent(s);
+}
