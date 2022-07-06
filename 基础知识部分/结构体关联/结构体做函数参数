@@ -1,0 +1,36 @@
+//
+// Created by Williams on 2022/7/6.
+//
+#include<iostream>
+using namespace std;
+//定义学生结构体
+struct Student
+{
+    string name;
+    int age;
+    int score;
+};
+//打印学生信息函数
+//1、值传递
+void PrintStudent01(struct Student s)
+{
+    cout<<"子函数中 姓名："<<s.name<<" 年龄："<<s.age<<" 分数："<<s.score<<endl;
+}
+//2、地址传递
+void PrintStudent02(struct Student *p)
+{
+    cout<<"子函数2中 姓名："<<p->name<<" 年龄："<<p->age<<" 分数："<<p->score<<endl;
+}
+int main()
+{
+    //结构体做函数参数
+    //将学生传入到一个参数中，打印学生身上的所有信息
+    //创建结构体变量
+    struct Student s;
+    s.name="张三";
+    s.age=20;
+    s.score=85;
+//    PrintStudent01(s);
+    PrintStudent02(&s);
+//    cout<<"main函数中打印姓名："<<s.name<<" 年龄："<<s.age<<" 分数："<<s.score<<endl;
+}
