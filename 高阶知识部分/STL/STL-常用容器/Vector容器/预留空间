@@ -1,0 +1,28 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+//vector 容器 预留空间
+void test01()
+{
+    vector<int>v1;
+    //利用 reserve 预留空间
+    v1.reserve(10000);
+    int number=0;//统计开辟次数
+    int *p=NULL;
+    for(int i=0;i<10000;i++)
+    {
+        v1.push_back(i);
+        if(p!=&v1[0])
+        {
+            p=&v1[0];
+            number++;
+        }
+    }
+    cout<<"number="<<number<<endl;
+}
+
+int main() {
+    test01();
+    return 0;
+}
