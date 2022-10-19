@@ -1,0 +1,43 @@
+#include <iostream>
+#include <deque>
+using namespace std;
+//deque容器大小操作
+void printDeque(const deque<int>&d)
+{
+    for(_Deque_iterator<int, const int &, const int *> it=d.begin(); it != d.end(); it++)
+    {
+        cout<<*it<<" ";
+    }
+    cout<<endl;
+}
+void test01()
+{
+    deque<int>d1;
+    for(int i=0;i<10;i++)
+    {
+        d1.push_back(i);
+    }
+    printDeque(d1);
+
+    if(d1.empty())
+    {
+        cout<<"d1 is empty"<<endl;
+    }
+    else
+    {
+        cout<<"d1 is not empty"<<endl;
+        cout<<"d1's size is："<<d1.size()<<endl;
+        //deque没有容量的概念
+    }
+    //重新指定大小
+    //d1.resize(15);
+    d1.resize(15,1);
+    printDeque(d1);
+
+    d1.resize(5);
+    printDeque(d1);
+}
+int main() {
+    test01();
+    return 0;
+}
