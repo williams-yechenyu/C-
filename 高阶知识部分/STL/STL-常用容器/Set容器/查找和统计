@@ -1,0 +1,50 @@
+#include <iostream>
+#include <set>
+using namespace std;
+
+//set 容器查找和统计
+void test01()
+{
+    //查找
+    set<int>s1;
+
+    //插入数据
+    s1.insert(10);
+    s1.insert(20);
+    s1.insert(30);
+    s1.insert(40);
+
+    set<int>::iterator pos=s1.find(30);
+    if(pos!=s1.end())
+    {
+        cout<<"find the elem: "<<*pos<<endl;
+    }
+    else
+    {
+        cout<<"Not find the elem"<<endl;
+    }
+}
+
+//统计
+void test02()
+{
+    //查找
+    set<int>s1;
+
+    //插入数据
+    s1.insert(10);
+    s1.insert(20);
+    s1.insert(30);
+    s1.insert(40);
+
+    //统计30的个数
+    int num=s1.count(30);
+    //对于 set 而言统计的结果要么是 0 ，要么是 1
+    cout<<"num="<<num<<endl;
+}
+
+int main() {
+    //test01();
+    test02();
+    return 0;
+}
