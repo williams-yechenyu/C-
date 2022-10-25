@@ -1,0 +1,69 @@
+#include <iostream>
+#include <list>
+using namespace std;
+
+void PrintList(const list<int>l)
+{
+    for(_List_const_iterator<int> it=l.begin(); it != l.end(); it++)
+    {
+        cout<<*it<<"  ";
+    }
+    cout<<endl;
+}
+//list 容器的插入和删除
+void test01()
+{
+    list<int>l1;
+    //尾插
+    l1.push_back(10);
+    l1.push_back(20);
+    l1.push_back(30);
+    //头插
+    l1.push_front(100);
+    l1.push_front(200);
+    l1.push_front(300);
+
+    //300 200 100 10 20 30
+    PrintList(l1);
+
+    //尾删
+    l1.pop_back();
+    //300 200 100 10 20
+    PrintList(l1);
+
+    //头删
+    l1.pop_front();
+    //200 100 10 20
+    PrintList(l1);
+
+    //insert 插入
+    //l1.insert(l1.begin(),1000);
+    //1000 200 100 10 20
+    //PrintList(l1);
+
+    //偏移
+    list<int>::iterator it=l1.begin();
+    l1.insert(++it,1000);
+    //200 1000 100 10 20
+    PrintList(l1);
+
+    //删除
+    it=l1.begin();
+    l1.erase(it);
+    //1000 100 10 20
+    PrintList(l1);
+
+    //移除
+    l1.push_back(10000);
+    PrintList(l1);
+    l1.remove(10000);
+    PrintList(l1);
+
+    //清空
+    l1.clear();
+    PrintList(l1);
+}
+int main() {
+    test01();
+    return 0;
+}
