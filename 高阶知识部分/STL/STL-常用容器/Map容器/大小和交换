@@ -1,0 +1,62 @@
+#include <iostream>
+#include <map>
+using namespace std;
+
+void printmap(map<int,int>&m)
+{
+    for(map<int,int>::iterator it=m.begin();it!=m.end();it++)
+    {
+        cout<<"key= "<<(*it).first<<"value= "<<it->second<<endl;
+    }
+    cout<<endl;
+}
+//map 容器的大小和交换的操作
+//大小
+void test01()
+{
+    map<int,int>m;
+    m.insert(pair<int,int>(1,10));
+    m.insert(pair<int,int>(2,20));
+    m.insert(pair<int,int>(3,30));
+    m.insert(pair<int,int>(4,40));
+
+    if(m.empty())
+    {
+        cout<<"m is empty"<<endl;
+    }
+    else
+    {
+        cout<<"m is not empty"<<endl;
+        cout<<"size of m ="<<m.size()<<endl;
+    }
+}
+//交换
+void test02()
+{
+    map<int,int>m;
+    m.insert(pair<int,int>(1,10));
+    m.insert(pair<int,int>(2,20));
+    m.insert(pair<int,int>(3,30));
+    m.insert(pair<int,int>(4,40));
+
+    map<int,int>m2;
+    m2.insert(pair<int,int>(5,50));
+    m2.insert(pair<int,int>(6,60));
+    m2.insert(pair<int,int>(7,70));
+    m2.insert(pair<int,int>(8,80));
+
+    cout<<"before the swap"<<endl;
+    printmap(m);
+    printmap(m2);
+
+    m.swap(m2);
+    cout<<"after the swap"<<endl;
+    printmap(m);
+    printmap(m2);
+
+}
+int main() {
+    //test01();
+    test02();
+    return 0;
+}
