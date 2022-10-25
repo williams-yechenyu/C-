@@ -1,0 +1,42 @@
+#include <iostream>
+#include <list>
+using namespace std;
+void PrintList(const list<int>&L)
+{
+    for(_List_const_iterator<int> it=L.begin(); it != L.end(); it++)
+    {
+        cout<<*it<<"  ";
+    }
+    cout<<endl;
+}
+//list 容器的构造函数
+void test01()
+{
+    //创建list 容器
+    list<int>L1;//默认构造
+
+    //添加数据
+    L1.push_back(10);
+    L1.push_back(20);
+    L1.push_back(30);
+    L1.push_back(40);
+
+    //遍历容器
+    PrintList(L1);
+
+    //按照区间方式构造
+    list<int>L2(L1.begin(),L1.end());
+    PrintList(L2);
+
+    //拷贝构造
+    list<int>L3(L2);
+    PrintList(L3);
+
+    //n 个 elem
+    list<int>L4(10,1000);
+    PrintList(L4);
+}
+int main() {
+    test01();
+    return 0;
+}
