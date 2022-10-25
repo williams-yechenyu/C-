@@ -1,0 +1,67 @@
+#include <iostream>
+#include <list>
+#include <algorithm>
+using namespace std;
+
+void PrintList(const list<int>&l)
+{
+    for(_List_const_iterator<int> it=l.begin(); it != l.end(); it++)
+    {
+        cout<<*it<<"  ";
+    }
+    cout<<endl;
+}
+// list 容器反转和排序
+void test01()
+{
+    //反转
+    list<int>l1;
+    l1.push_back(20);
+    l1.push_back(10);
+    l1.push_back(50);
+    l1.push_back(30);
+    l1.push_back(80);
+
+    cout<<"before reverse: "<<endl;
+    PrintList(l1);
+
+    //反转后
+    l1.reverse();
+    cout<<"after reverse: "<<endl;
+    PrintList(l1);
+}
+
+bool myCompare(int v1,int v2)
+{
+    //降序，就让第一个数 > 第二个数
+    return v1>v2;
+}
+//排序
+void test02()
+{
+    list<int>l1;
+    l1.push_back(20);
+    l1.push_back(10);
+    l1.push_back(50);
+    l1.push_back(30);
+    l1.push_back(80);
+
+    //排序
+    cout<<"before sort: "<<endl;
+    PrintList(l1);
+
+    //所有不支持随机访问迭代器的容器，不可以用标准算法
+    //不支持随机访问迭代器的容器，内部会提供一些对应的算法
+    //sort(l1.begin(),l1.end());
+    l1.sort();//默认排序规则，从小到大，升序
+    cout<<"after sort: "<<endl;
+    PrintList(l1);
+    l1.sort(myCompare);
+    PrintList(l1);
+
+}
+int main() {
+    //test01();
+    test02();
+    return 0;
+}
