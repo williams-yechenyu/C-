@@ -1,0 +1,52 @@
+#include <iostream>
+#include <queue>
+using namespace std;
+
+class Person
+{
+public:
+    Person(string name,int age)
+    {
+        this->m_name=name;
+        this->m_age=age;
+    }
+    string m_name;
+    int m_age;
+};
+//队列 queue
+void test01()
+{
+    //创建队列
+    queue<Person>q;
+
+    //准备数据
+    Person p1("tangseng",30);
+    Person p2("sunwukong",1000);
+    Person p3("zhubajie",900);
+    Person p4("shaseng",800);
+
+    //入队
+    q.push(p1);
+    q.push(p2);
+    q.push(p3);
+    q.push(p4);
+
+    cout<<"size of queue: "<<q.size()<<endl;
+    //判断只要队列不为空，查看队头，查看队尾，出队
+    while(!q.empty())
+    {
+        //查看队头
+        cout<<"top elm--name: "<<q.front().m_name<<"  age: "<<q.front().m_age<<endl;
+
+        //查看队尾
+        cout<<"last elm--name: "<<q.back().m_name<<"   age: "<<q.back().m_age<<endl;
+
+        //出队
+        q.pop();
+    }
+    cout<<"size of queue: "<<q.size()<<endl;
+}
+int main() {
+    test01();
+    return 0;
+}
