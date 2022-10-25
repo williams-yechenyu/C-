@@ -1,0 +1,31 @@
+#include <iostream>
+#include <list>
+using namespace std;
+
+//lust 容器中的数据存取
+void test01()
+{
+    list<int>l1;
+    l1.push_back(10);
+    l1.push_back(20);
+    l1.push_back(30);
+    l1.push_back(40);
+
+    //l1[0]--不可以用中括号访问 list 容器中的元素
+    //l1.at(0)--不可以用 at 方式访问 list 容器中的元素
+    //原因是 list 本质是链表，不是用连续的线性空间存储数据，迭代器也是不支持随机访问的
+
+    cout<<"the first elem is: "<<l1.front()<<endl;
+    cout<<"the last elem is: "<<l1.back()<<endl;
+
+    //验证迭代器是不支持随机访问的
+    list<int>::iterator it=l1.begin();
+    //it = it+1--不允许，不支持随机访问
+    it++;//支持双向
+    it--;
+
+}
+int main() {
+    test01();
+    return 0;
+}
