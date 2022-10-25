@@ -1,0 +1,52 @@
+#include <iostream>
+#include <stdio.h>
+#include <set>
+#include <string>
+using namespace std;
+
+//set 容器排序，存放自定义数据类型
+class Person
+{
+public:
+    Person(string name,int age)
+    {
+        this->m_age=age;
+        this->m_name=name;
+    }
+    string m_name;
+    int m_age;
+};
+class compareperson
+{
+public:
+    bool operator()(const Person &p1,const Person &p2)
+    {
+        //按照年龄做降序
+        return p1.m_age>p2.m_age;
+    }
+};
+void test01()
+{
+    //自定义的数据类型都会指定排序规则
+    set<Person,compareperson>s;
+    //创建 Person 对象
+    Person p1("liubei",24);
+    Person p2("guanyu",28);
+    Person p3("zhangfei",25);
+    Person p4("zhaoyun",21);
+
+    s.insert(p1);
+    s.insert(p2);
+    s.insert(p3);
+    s.insert(p4);
+
+    for(set<Person,compareperson>::iterator it=s.begin();it!=s.end();it++)
+    {
+        cout<<"name: "<<it->m_name<<"    "<<"age: "<<it->m_age<<endl;
+    }
+    cout<<endl;
+}
+int main() {
+    test01();
+    return 0;
+}
