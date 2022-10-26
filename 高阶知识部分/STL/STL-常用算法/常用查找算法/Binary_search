@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+//常用的查找算法 binary_search
+void test01()
+{
+    vector<int>v;
+    for(int i=0;i<10;i++)
+    {
+        v.push_back(i);
+    }
+    //查找容器中是否存在 9
+    //注意“容器必须是有序的序列，如果是无序序列，结果未知！
+    bool ret=binary_search(v.begin(),v.end(),9);
+    if(ret)
+    {
+        cout<<"find it"<<endl;
+    }
+    else
+    {
+        cout<<"not find"<<endl;
+    }
+}
+int main() {
+    test01();
+    return 0;
+}
